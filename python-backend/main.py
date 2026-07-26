@@ -10,10 +10,10 @@ load_dotenv(dotenv_path="../.env.local", override=True)
 
 app = FastAPI(title="Genblaze Studio Python Backend")
 
-# Allow CORS for Next.js frontend
+# Allow CORS for Next.js frontend (Allow all for easy Vercel deployment)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -46,3 +46,9 @@ async def generate_media(req: GenerateRequest):
 @app.get("/api/health")
 def health_check():
     return {"status": "ok", "message": "Genblaze Python Backend is running."}
+
+if __name__ == "__main__":
+    import uvicorn
+    # Render assigns a PORT environment variable. Fallback to 8000 for local dev.
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
