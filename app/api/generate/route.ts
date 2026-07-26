@@ -14,7 +14,8 @@ export async function POST(req: NextRequest) {
     }
 
     // Proxy the request to our Python FastAPI backend (which runs Genblaze SDK natively)
-    const pythonResponse = await fetch('http://localhost:8000/api/generate', {
+    const backendUrl = process.env.NEXT_PUBLIC_PYTHON_API_URL || 'http://localhost:8000';
+    const pythonResponse = await fetch(`${backendUrl}/api/generate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
