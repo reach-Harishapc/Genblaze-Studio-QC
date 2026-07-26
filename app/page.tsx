@@ -92,10 +92,10 @@ export default function LandingPage() {
               Open Studio
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="#features" className="w-full sm:w-auto px-8 py-4 bg-studio-card border border-studio-border hover:border-studio-muted text-white font-bold rounded-full transition-all flex items-center justify-center gap-2">
+            <a href="https://youtu.be/_0vQmE3hHcU" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 bg-studio-card border border-studio-border hover:border-studio-muted text-white font-bold rounded-full transition-all flex items-center justify-center gap-2">
               <PlayCircle className="w-5 h-5 text-studio-muted" />
               Watch Demo
-            </Link>
+            </a>
           </div>
         </div>
 
