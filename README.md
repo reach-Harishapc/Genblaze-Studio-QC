@@ -43,7 +43,7 @@ Create a `.env.local` file in the root directory:
 B2_APPLICATION_KEY_ID=your_key_id
 B2_APPLICATION_KEY=your_app_key
 B2_BUCKET_NAME=your_bucket_name
-B2_ENDPOINT_URL=s3.us-west-004.backblazeb2.com
+B2_ENDPOINT_URL=your_bb_endpoint
 
 # GMI Cloud API
 GMI_CLOUD_API_KEY=your_gmi_cloud_key
