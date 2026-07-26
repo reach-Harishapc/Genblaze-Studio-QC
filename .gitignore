@@ -16,6 +16,7 @@
 # misc
 .DS_Store
 *.pem
+devpost_submission_guide.md
 
 # debug
 npm-debug.log*
